@@ -10,9 +10,6 @@ import java.rmi.registry.LocateRegistry;
 public class start {
     public static void main(String[] args) {
         try {
-
-
-
             StudentServiceImpl studentService = new StudentServiceImpl();
             LocateRegistry.createRegistry(9005);
             Naming.rebind("rmi://127.0.0.1:9005/StudentService", studentService);
